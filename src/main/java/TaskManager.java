@@ -15,15 +15,15 @@ public class TaskManager {
     }
 
     public List<String> listTasks() {
-        if (tasks.isEmpty() || tasks==null) {
+        if (tasks.isEmpty() || tasks == null) {
             System.out.println("No tasks found");
-        }
-        else {
+        } else {
             for (String task : tasks) {
                 System.out.println(task);
             }
         }
         //throw new UnsupportedOperationException("Implement this method!");
+        return tasks;
     }
 
     public void deleteTask(String task){
