@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class TaskManager {
@@ -5,14 +6,24 @@ public class TaskManager {
 
     public TaskManager() {
         // Initialize tasks list
+        this.tasks = new ArrayList<>();
     }
 
     public void addTask(String task) {
-        throw new UnsupportedOperationException("Implement this method!");
+        tasks.add(task);
+        //throw new UnsupportedOperationException("Implement this method!");
     }
 
     public List<String> listTasks() {
-        throw new UnsupportedOperationException("Implement this method!");
+        if (tasks.isEmpty() || tasks==null) {
+            System.out.println("No tasks found");
+        }
+        else {
+            for (String task : tasks) {
+                System.out.println(task);
+            }
+        }
+        //throw new UnsupportedOperationException("Implement this method!");
     }
 
     public void deleteTask(String task){
